@@ -2,7 +2,7 @@ package stepDefinitions;
 
 import static org.junit.Assert.assertEquals;
 
-
+import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -18,6 +18,7 @@ public class StepDefinitions {
 
 	WebDriver driver;
 	RandomString Rstring = new RandomString();
+	Random random = new Random(100);
 
 	
 	@Given("I want navigate to https:\\/\\/login.mailchimp.com\\/signup\\/")
@@ -36,7 +37,7 @@ public class StepDefinitions {
 	public void i_register_my_lar2_lars_com() {
 
 		WebElement searchBox = driver.findElement(By.name("email"));
-		searchBox.sendKeys("lar2@larz.com");
+		searchBox.sendKeys(random + "@larz.com");
 
 	}
 
@@ -44,7 +45,7 @@ public class StepDefinitions {
 	public void i_create_a_lasses999() {
 
 		WebElement searchBox1 = driver.findElement(By.name("username"));
-		searchBox1.sendKeys("Lasses999");
+		searchBox1.sendKeys("Lasses999" + random);
 
 	}
 
@@ -99,7 +100,7 @@ public class StepDefinitions {
 		public void i_register_my_lazz_lars_com() {
 			
 			WebElement searchBox = driver.findElement(By.name("email"));
-			searchBox.sendKeys("Rstring"+"@lars.com");
+			searchBox.sendKeys(random+"@lars.com");
 		   
 		}
 
@@ -134,7 +135,7 @@ public class StepDefinitions {
 			public void i_create_a_lasse656() {
 				
 				WebElement searchBox1 = driver.findElement(By.name("username"));
-				searchBox1.sendKeys("Passe" + Rstring);
+				searchBox1.sendKeys("Passe" + random);
 			    
 			}
 			@When("I Create a Larsipan4! and press sign up")
