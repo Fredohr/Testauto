@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -16,56 +17,87 @@ import io.cucumber.java.en.When;
 
 public class StepDefinitions {
 
-	WebDriver driver = new ChromeDriver();
+	WebDriver driver;
 	Random random = new Random(100);
 
 	@Given("I want navigate to https:\\/\\/login.mailchimp.com\\/signup\\/")
 	public void i_want_navigate_to_https_login_mailchimp_com_signup() {
 
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\Admin\\Downloads\\chromedriver_win32ny\\chromedriver.exe");
+		driver = new ChromeDriver();
+
 		driver.manage().window().maximize();
 		driver.get("https://login.mailchimp.com/signup/");
 
-		throw new io.cucumber.java.PendingException();
 	}
 
-	@When("I register my lars@lars.com")
-	public void i_register_my_lars_lars_com() {
+	@When("I register my larz@lars.com")
+	public void i_register_my_larz_lars_com() {
 
 		WebElement searchBox = driver.findElement(By.name("email"));
-		searchBox.sendKeys("lars@lars.com");
+		searchBox.sendKeys("larz@larz.com");
 
-		throw new io.cucumber.java.PendingException();
 	}
 
-	@When("I create a Lasse666")
-	public void i_create_a_lasse666() {
+	@And("I create a Lasse666")
+	public void i_create_a_lasse366() {
 
 		WebElement searchBox1 = driver.findElement(By.name("username"));
-		searchBox1.sendKeys("Lasse666");
+		searchBox1.sendKeys("Lasse366");
 
-		throw new io.cucumber.java.PendingException();
 	}
 
-	@When("I Create a Larsipan1! and press sign up")
-	public void i_create_a_larsipan1_and_press_sign_up() {
+	@And("I Create a Larsipan2! and press sign up")
+	public void i_create_a_larsipan2_and_press_sign_up() {
 
 		WebElement searchBox11 = driver.findElement(By.name("password"));
-		searchBox11.sendKeys("Larsipan1!");
+		searchBox11.sendKeys("Larsipan2!");
+		searchBox11.submit();
 
-		throw new io.cucumber.java.PendingException();
 	}
+	
+
+		@When("I register my hars@lars.com")
+		public void i_register_my_hars_lars_com() {
+			
+			WebElement searchBox = driver.findElement(By.name("email"));
+			searchBox.sendKeys("hars@lars.com");
+		  
+		}
+
+
+		@When("I create a Hasse666")
+		public void i_create_a_hasse666() {
+			
+			WebElement searchBox1 = driver.findElement(By.name("username"));
+			searchBox1.sendKeys("Hasse676");
+			
+		}
+		@When("I Create a Larsipan1! and press sign up")
+		public void i_create_a_larsipan1_and_press_sign_up() {
+		    
+			WebElement searchBox11 = driver.findElement(By.name("password"));
+			searchBox11.sendKeys("Larsipan2!");
+			searchBox11.submit();
+
+			
+		}
+
+
+
 
 	@Then("I validate that i is re-directed to the confirmation page")
 	public void i_validate_that_i_is_re_directed_to_the_confirmation_page() {
 
 		WebElement ReEnter = driver.findElement(
-		By.xpath("/html/body/div[1]/div/div[1]/div[2]/main/div/div/div/div/div/div/div/span/div/p[2]/a"));
+				By.className("signup-wrap"));
 		boolean ReEnterDisplayed = ReEnter.isDisplayed();
 		assertEquals(true, ReEnterDisplayed);
 
-		throw new io.cucumber.java.PendingException();
 	}
-
+	
 }
+
 
 
