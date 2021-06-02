@@ -2,7 +2,7 @@ package stepDefinitions;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.Random;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -17,7 +17,7 @@ import io.cucumber.java.en.When;
 public class StepDefinitions {
 
 	WebDriver driver;
-	Random random = new Random(100);
+	//Random random = new Random(100);
 	randomString.RandomString Rstring = new randomString.RandomString();
 
 	
@@ -45,7 +45,7 @@ public class StepDefinitions {
 	public void i_create_a_lasse336() {
 
 		WebElement searchBox1 = driver.findElement(By.name("username"));
-		searchBox1.sendKeys("Lasse" + random);
+		searchBox1.sendKeys("Lasse" + Rstring);
 
 	}
 
@@ -55,6 +55,10 @@ public class StepDefinitions {
 		WebElement searchBox11 = driver.findElement(By.name("password"));
 		searchBox11.sendKeys("Larsipan244!");
 		searchBox11.submit();
+		
+		WebElement ReEnter = driver.findElement(By.className("signup-wrap"));
+		boolean ReEnterDisplayed = ReEnter.isDisplayed();
+		assertEquals(true, ReEnterDisplayed);
 
 	}
 
@@ -86,7 +90,7 @@ public class StepDefinitions {
 	@Then("I validate that i is re-directed to the confirmation page")
 	public void i_validate_that_i_is_re_directed_to_the_confirmation_page() {
 
-		WebElement ReEnter = driver.findElement(By.className("signup-wrap"));
+		WebElement ReEnter = driver.findElement(By.className("invalid-error"));
 		boolean ReEnterDisplayed = ReEnter.isDisplayed();
 		assertEquals(true, ReEnterDisplayed);
 
@@ -96,7 +100,7 @@ public class StepDefinitions {
 		public void i_register_my_lazz_lars_com() {
 			
 			WebElement searchBox = driver.findElement(By.name("email"));
-			searchBox.sendKeys(random+"@lars.com");
+			searchBox.sendKeys(Rstring+"@lars.com");
 		   
 		}
 
@@ -114,6 +118,10 @@ public class StepDefinitions {
 			searchBox11.sendKeys("Larsipan3!");
 			searchBox11.submit();
 		   
+			
+			WebElement ReEnter = driver.findElement(By.className("invalid-error"));
+			boolean ReEnterDisplayed = ReEnter.isDisplayed();
+			assertEquals(true, ReEnterDisplayed);
 		}
 
 		
@@ -127,7 +135,7 @@ public class StepDefinitions {
 			public void i_create_a_lasse656() {
 				
 				WebElement searchBox1 = driver.findElement(By.name("username"));
-				searchBox1.sendKeys("Passe" + random);
+				searchBox1.sendKeys("Passe" + Rstring);
 			    
 			}
 			@When("I Create a Larsipan4! and press sign up")
@@ -136,7 +144,11 @@ public class StepDefinitions {
 				WebElement searchBox11 = driver.findElement(By.name("password"));
 				searchBox11.sendKeys("Larsipan4!");
 				searchBox11.submit();
-			   
+				
+				WebElement ReEnter = driver.findElement(By.className("c-entryShellContainer"));
+				boolean ReEnterDisplayed = ReEnter.isDisplayed();
+				assertEquals(true, ReEnterDisplayed);
+				
 			}
 
 
