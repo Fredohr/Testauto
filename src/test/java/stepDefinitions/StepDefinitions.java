@@ -42,10 +42,10 @@ public class StepDefinitions {
 	}
 
 	@And("I create a Lasse666")
-	public void i_create_a_lasse366() {
+	public void i_create_a_lasse336() {
 
 		WebElement searchBox1 = driver.findElement(By.name("username"));
-		searchBox1.sendKeys("Lasse366");
+		searchBox1.sendKeys("Lasse" + random);
 
 	}
 
@@ -115,6 +115,30 @@ public class StepDefinitions {
 			searchBox11.submit();
 		   
 		}
+
+		
+			@When("I register my ")
+			public void i_register_my() {
+			    
+			}
+
+
+			@When("I create a Lasse656")
+			public void i_create_a_lasse656() {
+				
+				WebElement searchBox1 = driver.findElement(By.name("username"));
+				searchBox1.sendKeys("Passe" + random);
+			    
+			}
+			@When("I Create a Larsipan4! and press sign up")
+			public void i_create_a_larsipan4_and_press_sign_up() {
+				
+				WebElement searchBox11 = driver.findElement(By.name("password"));
+				searchBox11.sendKeys("Larsipan4!");
+				searchBox11.submit();
+			   
+			}
+
 
 
 
