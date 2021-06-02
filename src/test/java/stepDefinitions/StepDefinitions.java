@@ -17,8 +17,7 @@ import io.cucumber.java.en.When;
 public class StepDefinitions {
 
 	WebDriver driver;
-	//Random random = new Random(100);
-	randomString.RandomString Rstring = new randomString.RandomString();
+	RandomString Rstring = new RandomString();
 
 	
 	@Given("I want navigate to https:\\/\\/login.mailchimp.com\\/signup\\/")
@@ -34,18 +33,18 @@ public class StepDefinitions {
 	}
 
 	@When("I register my larz@lars.com")
-	public void i_register_my_larz_lars_com() {
+	public void i_register_my_lar2_lars_com() {
 
 		WebElement searchBox = driver.findElement(By.name("email"));
-		searchBox.sendKeys("larz@larz.com");
+		searchBox.sendKeys("lar2@larz.com");
 
 	}
 
-	@And("I create a Lasse666")
-	public void i_create_a_lasse336() {
+	@And("I create a Lasse999")
+	public void i_create_a_lasses999() {
 
 		WebElement searchBox1 = driver.findElement(By.name("username"));
-		searchBox1.sendKeys("Lasse" + Rstring);
+		searchBox1.sendKeys("Lasses999");
 
 	}
 
@@ -71,10 +70,10 @@ public class StepDefinitions {
 	}
 
 	@When("I create a Hasse666")
-	public void i_create_a_hasse666() {
+	public void i_create_a_hasse686() {
 
 		WebElement searchBox1 = driver.findElement(By.name("username"));
-		searchBox1.sendKeys("Hasse676");
+		searchBox1.sendKeys("Hasse686");
 
 	}
 
@@ -100,7 +99,7 @@ public class StepDefinitions {
 		public void i_register_my_lazz_lars_com() {
 			
 			WebElement searchBox = driver.findElement(By.name("email"));
-			searchBox.sendKeys(Rstring+"@lars.com");
+			searchBox.sendKeys("Rstring"+"@lars.com");
 		   
 		}
 
