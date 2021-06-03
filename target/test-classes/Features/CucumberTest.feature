@@ -12,9 +12,9 @@ Feature: Sign up at Mailchimp.com
    Then I validate that i is re-directed to the confirmation page
 
     Examples: 
-      |     email      | username |  password  |
-      | hars@lars.com  | Hasse666 | Larsipan1! |
-      | larz@lars.com  | Lasse999 | Larsipan2! |
-      | lazz@lars.com  |          | Larsipan3! |
-      |                | Lasse656 | Larsipan4! |
+      |     email        | username  |  password  |
+      | hars@lars.com    | Hasse686  | Larsipan1! |
+      | lars23@larz.com  | Lasses879 | Larsipan2! |
+      | lasz@lars.com    |           | Larsipan3! |
+      |                  | Lasse365  | Larsipan4! |
       

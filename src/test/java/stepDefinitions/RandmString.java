@@ -1,6 +1,6 @@
 package stepDefinitions;
 
-public class RandomString {
+public class RandmString {
 
 	static String getAlphaNumericString(int n) {
 
@@ -22,7 +22,7 @@ public class RandomString {
 
 		int n = 20;
 
-		System.out.println(RandomString.getAlphaNumericString(n));
+		System.out.println(RandmString.getAlphaNumericString(n));
 
 	}
 }
