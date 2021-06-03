@@ -19,7 +19,7 @@ import io.cucumber.java.en.When;
 public class StepDefinitions {
 
 	WebDriver driver;
-	RandmString Rstring = new RandmString();
+	RandmString Rstrings= new RandmString();
 	Random rand = new Random(100);
 	double randnr = Math.random();
 
@@ -77,7 +77,7 @@ public class StepDefinitions {
 	public void i_create_a_hasse686() {
 
 		WebElement searchBox1 = driver.findElement(By.name("username"));
-		searchBox1.sendKeys("Hasse686" + Rstring);
+		searchBox1.sendKeys("Hasse686" + Rstrings);
 
 	}
 
@@ -111,7 +111,7 @@ public class StepDefinitions {
 		public void i_create_a() {
 			
 			WebElement searchBox1 = driver.findElement(By.name("username"));
-			searchBox1.sendKeys("lars"+Rstring+Rstring+Rstring+Rstring+Rstring);
+			searchBox1.sendKeys("lars"+Rstrings+Rstrings+Rstrings+Rstrings+Rstrings);
 		    
 		}
 		@When("I Create a Larsipan3! and press sign up")
