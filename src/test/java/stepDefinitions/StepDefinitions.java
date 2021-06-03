@@ -3,6 +3,8 @@ package stepDefinitions;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Random;
+import java.lang.Math;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -18,8 +20,8 @@ public class StepDefinitions {
 
 	WebDriver driver;
 	RandmString Rstring = new RandmString();
-	Random random = new Random(100);
-	
+	Random rand = new Random(100);
+	double randnr = Math.random();
 
 	
 	@Given("I want navigate to https:\\/\\/login.mailchimp.com\\/signup\\/")
@@ -34,16 +36,16 @@ public class StepDefinitions {
 
 	}
 
-	@When("I register my larz@lars.com")
-	public void i_register_my_lar23_lars_com() {
+	@When("I register my lars23@larz.com")
+	public void i_register_my_lars23_larz_com() {
 
 		WebElement searchBox = driver.findElement(By.name("email"));
 		searchBox.sendKeys("lars23@larz.com");
 
 	}
 
-	@And("I create a Lasse879")
-	public void i_create_a_lasses879() {
+	@And("I create a Lasses879")
+	public void i_create_a_Lasses879() {
 
 		WebElement searchBox1 = driver.findElement(By.name("username"));
 		searchBox1.sendKeys("Lasses879");
@@ -51,13 +53,13 @@ public class StepDefinitions {
 	}
 
 	@And("I Create a Larsipan2! and press sign up")
-	public void i_create_a_larsipan243_and_press_sign_up() {
+	public void i_create_a_larsipan2_and_press_sign_up() {
 
 		WebElement searchBox11 = driver.findElement(By.name("password"));
-		searchBox11.sendKeys("Larsipan243!");
+		searchBox11.sendKeys("Larsipan2!");
 		searchBox11.submit();
 		
-		WebElement ReEnter = driver.findElement(By.className("signup-wrap"));
+		WebElement ReEnter = driver.findElement(By.className("invalid-error"));
 		boolean ReEnterDisplayed = ReEnter.isDisplayed();
 		assertEquals(true, ReEnterDisplayed);
 
@@ -71,11 +73,11 @@ public class StepDefinitions {
 
 	}
 
-	@When("I create a Hasse666")
+	@When("I create a Hasse686")
 	public void i_create_a_hasse686() {
 
 		WebElement searchBox1 = driver.findElement(By.name("username"));
-		searchBox1.sendKeys("Hasse686");
+		searchBox1.sendKeys("Hasse686" + Rstring);
 
 	}
 
@@ -91,13 +93,13 @@ public class StepDefinitions {
 	@Then("I validate that i is re-directed to the confirmation page")
 	public void i_validate_that_i_is_re_directed_to_the_confirmation_page() {
 
-		WebElement ReEnter = driver.findElement(By.className("invalid-error"));
+		WebElement ReEnter = driver.findElement(By.className("signup-wrap"));
 		boolean ReEnterDisplayed = ReEnter.isDisplayed();
 		assertEquals(true, ReEnterDisplayed);
 
 	}
 	
-		@When("I register my lazz@lars.com")
+		@When("I register my lasz@lars.com")
 		public void i_register_my_lasz_lars_com() {
 			
 			WebElement searchBox = driver.findElement(By.name("email"));
@@ -132,11 +134,11 @@ public class StepDefinitions {
 			}
 
 
-			@When("I create a Lasse656")
+			@When("I create a Lasse365")
 			public void i_create_a_lasse365() {
 				
 				WebElement searchBox1 = driver.findElement(By.name("username"));
-				searchBox1.sendKeys("Lasse365");
+				searchBox1.sendKeys("Lasse365" + rand);
 			    
 			}
 			@When("I Create a Larsipan4! and press sign up")
@@ -149,6 +151,7 @@ public class StepDefinitions {
 				WebElement ReEnter = driver.findElement(By.className("c-entryShellContainer"));
 				boolean ReEnterDisplayed = ReEnter.isDisplayed();
 				assertEquals(true, ReEnterDisplayed);
+				
 				
 			}
 
