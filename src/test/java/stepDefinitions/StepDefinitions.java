@@ -19,6 +19,7 @@ public class StepDefinitions {
 	WebDriver driver;
 	RandomString Rstring = new RandomString();
 	Random random = new Random(100);
+	
 
 	
 	@Given("I want navigate to https:\\/\\/login.mailchimp.com\\/signup\\/")
@@ -42,10 +43,10 @@ public class StepDefinitions {
 	}
 
 	@And("I create a Lasse999")
-	public void i_create_a_lasses999() {
+	public void i_create_a_lasses889() {
 
 		WebElement searchBox1 = driver.findElement(By.name("username"));
-		searchBox1.sendKeys("Lasses999" + random);
+		searchBox1.sendKeys("Lasses889");
 
 	}
 

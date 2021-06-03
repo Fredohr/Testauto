@@ -14,7 +14,7 @@ Feature: Sign up at Mailchimp.com
     Examples: 
       |     email      | username |  password  |
       | hars@lars.com  | Hasse666 | Larsipan1! |
-      | larz@lars.com  | Lasse666 | Larsipan2! |
+      | larz@lars.com  | Lasse999 | Larsipan2! |
       | lazz@lars.com  |          | Larsipan3! |
       |                | Lasse656 | Larsipan4! |
       
